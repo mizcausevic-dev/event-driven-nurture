@@ -1,0 +1,36 @@
+{
+  "name": "event-driven-nurture",
+  "version": "1.1.0",
+  "description": "Board-ready Kinetic Gain surface for event-driven nurture sequencing, conversion pacing, and activation-aware follow-up loops.",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc --pretty false",
+    "test": "vitest run",
+    "demo": "tsx scripts/run_demo.ts",
+    "smoke": "tsx scripts/smoke_check.ts",
+    "prerender": "tsx scripts/prerender.ts",
+    "verify": "npm run build && npm run test && npm run demo && npm run smoke && npm run prerender",
+    "render:assets": "powershell -ExecutionPolicy Bypass -File .\\scripts\\render_readme_assets.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizcausevic-dev/event-driven-nurture.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mizcausevic-dev/event-driven-nurture/issues"
+  },
+  "homepage": "http://nurture.kineticgain.com/",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  }
+}
