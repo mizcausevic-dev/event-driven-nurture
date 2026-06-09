@@ -156,6 +156,37 @@ function healthPill(health: "healthy" | "watch" | "critical") {
   return `<span class="pill ${cls}">${health}</span>`;
 }
 
+function renderProductDepth() {
+  return `
+    <section class="content-grid">
+      <article class="panel span-6">
+        <p class="panel-title">Product depth</p>
+        <h2>What this product does</h2>
+        <p>Event Driven Nurture turns product, campaign, webinar, pricing, and re-engagement signals into governed follow-up lanes. Non-technical leaders see which nurture motions create activated demand. Technical teams see the trigger, cadence, suppression, and artifact logic behind each route.</p>
+      </article>
+      <article class="panel span-6">
+        <p class="panel-title">GTM analyst lens</p>
+        <h2>Where revenue teams use it</h2>
+        <p>Use it to compare signup, demo, webinar, pricing, sales-assist, and reactivation sequences by conversion quality instead of send volume. It shows when follow-up is too slow, too generic, over-touched, or missing the right proof artifact.</p>
+      </article>
+      <article class="panel span-6">
+        <p class="panel-title">Value architecture</p>
+        <h2>Where the money leaks</h2>
+        <p>The system surfaces leakage from delayed activation, stale nurture, weak segmentation, duplicate touches, and sequences that generate activity but not qualified pipeline. Leaders can redirect spend toward the follow-up paths that actually compound demand.</p>
+      </article>
+      <article class="panel span-6">
+        <p class="panel-title">Technical proof</p>
+        <h2>What is inspectable</h2>
+        <p>Static routes, API-style outputs, seeded sequence lanes, cadence records, nurture artifacts, verification checks, prerendering, tests, smoke checks, and screenshot generation keep this as a real operator surface rather than generic marketing copy.</p>
+      </article>
+      <article class="panel span-12">
+        <p class="panel-title">Portfolio pattern</p>
+        <h2>What these repos have in common</h2>
+        <p>Each Kinetic Gain surface converts operational evidence into board-readable decisions: owner, signal, model, risk, value, route, and verification stay visible together.</p>
+      </article>
+    </section>`;
+}
+
 export function renderOverview() {
   const dashboard = summary();
   const sequences = sequenceLane();
@@ -246,6 +277,7 @@ export function renderOverview() {
         </div>
       </article>
     </section>
+    ${renderProductDepth()}
   `;
 
   return layout("Event Driven Nurture", "/", body);
@@ -290,6 +322,7 @@ Notes: ${item.notes}</div>
         </div>
       </article>
     </section>
+    ${renderProductDepth()}
   `;
 
   return layout("Event Driven Nurture - Sequence Lane", "/sequence-lane", body);
@@ -422,6 +455,7 @@ export function renderDocs() {
         </ul>
       </article>
     </section>
+    ${renderProductDepth()}
   `;
 
   return layout("Event Driven Nurture - Docs", "/docs", body);

@@ -9,6 +9,18 @@ Board-ready Kinetic Gain surface for event-driven nurture sequencing, conversion
 
 Leaders need one nurture surface that shows which trigger paths are converting, which follow-up cadences are stalling, and where activation pressure should move before the next revenue push.
 
+## What this product does
+
+Event Driven Nurture turns product, campaign, webinar, pricing, and re-engagement signals into governed follow-up lanes. It connects trigger source, audience, cadence rule, suppression posture, sequence artifact, activation lift, and conversion quality in one operating view.
+
+For a SaaS go-to-market analyst, the product answers which nurture paths create activated demand, which ones only create activity, and where sales, marketing, product, or customer success should intervene before pipeline quality decays.
+
+For a SaaS value architect, it exposes where money leaks: delayed activation, stale nurture, weak segmentation, duplicate touches, missing proof artifacts, and sequences that increase volume without improving qualified conversion.
+
+For technical reviewers, the repo includes static routes, API-style outputs, seeded sequence data, cadence records, artifact samples, verification checks, prerendered pages, smoke tests, and screenshot generation. It is meant to demonstrate an inspectable operator surface, not a keyword-only landing page.
+
+This follows the broader Kinetic Gain pattern: every surface keeps owner, signal, model, risk, value, route, and verification visible together so non-technical and technical readers can understand what the system does and why it matters.
+
 ## What it includes
 
 - TypeScript control plane for event-driven nurture sequencing, trigger routing, follow-up pacing, and activation-aware conversion loops
